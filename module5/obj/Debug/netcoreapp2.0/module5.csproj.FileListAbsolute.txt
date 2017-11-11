@@ -1,0 +1,11 @@
+C:\Dev\module5\bin\Debug\netcoreapp2.0\module5.deps.json
+C:\Dev\module5\bin\Debug\netcoreapp2.0\module5.runtimeconfig.json
+C:\Dev\module5\bin\Debug\netcoreapp2.0\module5.runtimeconfig.dev.json
+C:\Dev\module5\bin\Debug\netcoreapp2.0\module5.dll
+C:\Dev\module5\bin\Debug\netcoreapp2.0\module5.pdb
+C:\Dev\module5\obj\Debug\netcoreapp2.0\module5.csproj.CoreCompileInputs.cache
+C:\Dev\module5\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Dev\module5\obj\Debug\netcoreapp2.0\module5.AssemblyInfoInputs.cache
+C:\Dev\module5\obj\Debug\netcoreapp2.0\module5.AssemblyInfo.cs
+C:\Dev\module5\obj\Debug\netcoreapp2.0\module5.dll
+C:\Dev\module5\obj\Debug\netcoreapp2.0\module5.pdb

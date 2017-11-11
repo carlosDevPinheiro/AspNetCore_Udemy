@@ -1,0 +1,41 @@
+<!-- <form action="product/save" method="post">
+Id:
+<input type="text" name="Id">
+<br>
+Nome:
+<input type="text" name="Name" >
+<br>
+Preço:
+<input type="text" name="Price" >
+
+<br>
+<button type="submit" >Salvar</button>
+</form> -->
+
+<!-- Razor -->
+
+@model module3.Models.Product
+
+<form asp-controller="Product" asp-action="Save" method="post">
+Id:
+<input asp-for="Id" type="text" name="Id">
+<span asp-validation-for="Id"></span>
+<br>
+Nome:
+<input asp-for="Name" type="text" name="Name" >
+<span asp-validation-for="Name"></span>
+
+<br>
+Preço:
+<input asp-for="Price" type="text" name="Price" >
+<span asp-validation-for="Price"></span>
+<br>
+<button type="submit" >Salvar</button>
+
+
+</form>
+
+@if(ViewBag.menssagemError != null)
+{
+  <span>@ViewBag.menssagemError</span>
+}
