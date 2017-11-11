@@ -1,0 +1,10 @@
+C:\Dev\module2\hosting\bin\Debug\netcoreapp2.0\hosting.deps.json
+C:\Dev\module2\hosting\bin\Debug\netcoreapp2.0\hosting.runtimeconfig.json
+C:\Dev\module2\hosting\bin\Debug\netcoreapp2.0\hosting.runtimeconfig.dev.json
+C:\Dev\module2\hosting\bin\Debug\netcoreapp2.0\hosting.dll
+C:\Dev\module2\hosting\bin\Debug\netcoreapp2.0\hosting.pdb
+C:\Dev\module2\hosting\obj\Debug\netcoreapp2.0\hosting.csproj.CoreCompileInputs.cache
+C:\Dev\module2\hosting\obj\Debug\netcoreapp2.0\hosting.AssemblyInfoInputs.cache
+C:\Dev\module2\hosting\obj\Debug\netcoreapp2.0\hosting.AssemblyInfo.cs
+C:\Dev\module2\hosting\obj\Debug\netcoreapp2.0\hosting.dll
+C:\Dev\module2\hosting\obj\Debug\netcoreapp2.0\hosting.pdb
