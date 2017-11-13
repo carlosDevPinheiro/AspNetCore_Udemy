@@ -1,0 +1,16 @@
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.Web.deps.json
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.Web.runtimeconfig.json
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.Web.runtimeconfig.dev.json
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.Web.dll
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.Web.pdb
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\obj\Debug\netcoreapp2.0\StoreOfBuild.Web.csproj.CoreCompileInputs.cache
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\obj\Debug\netcoreapp2.0\StoreOfBuild.Web.AssemblyInfoInputs.cache
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\obj\Debug\netcoreapp2.0\StoreOfBuild.Web.AssemblyInfo.cs
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\obj\Debug\netcoreapp2.0\StoreOfBuild.Web.dll
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\obj\Debug\netcoreapp2.0\StoreOfBuild.Web.pdb
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.Data.dll
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.DI.dll
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.Domain.dll
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.DI.pdb
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.Data.pdb
+C:\Dev\Udemy\module7\src\StoreOfBuild.Web\bin\Debug\netcoreapp2.0\StoreOfBuild.Domain.pdb

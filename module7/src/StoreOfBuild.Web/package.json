@@ -1,0 +1,19 @@
+{
+  "name": "'Projeto-Web'",
+  "version": "1.0.0",
+  "description": "Projeto para loja de materiais para contrução",
+  "main": "home.cshtml",
+  "author": "Antonio Carlos ",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-uncss": "^1.0.6",
+    "jquery": "^3.2.1",
+    "jquery-validation": "^1.17.0",
+    "jquery-validation-unobtrusive": "^3.2.6"
+  }
+}
