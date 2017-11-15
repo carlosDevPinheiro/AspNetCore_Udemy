@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<StoreOfBuild.Web.ViewModels.CategoryViewModel>
+
+@{
     ViewData["Title"] = "Categoria";
 }
 
@@ -12,14 +14,18 @@
  <div class="col-md-12">
      <table class="table table-hover">
          <tbody>
-             <tr>
-                 <td>
-                     <a class="name">Category 1</a>
-                 </td>
-                  <td>
-                     <a class="btn">Edit</a>
-                 </td>
+             @foreach(var viewModel in @Model)
+             {
+                 <tr>
+                    <td>
+                        <a class="name">@viewModel.Name</a>
+                    </td>
+                    <td>
+                        <a href="/Category/CreateOrEdit/@viewModel.Id" class="btn">Edit</a>
+                    </td>
              </tr>
+             }
+             
          </tbody>
      </table>
  </div>

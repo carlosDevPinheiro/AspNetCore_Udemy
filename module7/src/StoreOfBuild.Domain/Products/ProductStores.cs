@@ -14,6 +14,8 @@ namespace StoreOfBuild.Domain.Products
             _repositoryProduct = repositoryProduct;
         }
 
+       
+
         public void Store(ProductDTO dto)
         {
            var category =  _repositoryCategory.GetById(dto.CategoryId);

@@ -2,7 +2,7 @@ using System;
 
 namespace StoreOfBuild.Domain.Products
 {
-    public class Product
+    public class Product: Entity
     {
         public Product(string name, Category category, decimal price, int stockQuantity)
         {
@@ -12,7 +12,7 @@ namespace StoreOfBuild.Domain.Products
 
 
 
-        public int Id { get; private set; }
+        
         public string Name { get; private set; }
         public Category Category { get; private set; }
         public decimal Price { get; private set; }

@@ -1,4 +1,5 @@
-﻿
+﻿@model StoreOfBuild.Web.ViewModels.CategoryViewModel
+@using StoreOfBuild.Web.ViewModels
 
 @{
     ViewData["Title"] = "Home Page";
@@ -13,11 +14,14 @@
 
 <div class="row form-wrapper" >
     <div class="col-md-12">
-        <form id="form" class="form-horizontal" asp-action="CreateOrEdit" asp-controller="Category" asp-anti-forgery>
+        <form id="form" class="form-horizontal" asp-action="CreateOrEdit" asp-controller="Category"
+        data-ajax="true" data-ajax-method="post" data-ajax-failure="formOnFail" data-ajax-success="window.location ='/Category'" asp-anti-forgery>
+           <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label class="col-md-2 control-label">Name</label>
                 <div class="col-md-8">
-                    <input class="form-control" />
+                    <input class="form-control" asp-for="Name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
             </div>
              <div class="form-group">              
@@ -28,3 +32,10 @@
         </form>
     </div>
 </div>
+
+
+@section Scripts {
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/jquery.validate.unobtrusive.js"></script> 
+    <script src="/js/jquery.unobtrusive-ajax.min.js"></script>      
+}

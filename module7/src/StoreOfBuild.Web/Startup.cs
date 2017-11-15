@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StoreOfBuild.DI;
+using StoreOfBuild.Domain;
+using StoreOfBuild.Web.Filters;
 
 namespace StoreOfBuild.Web
 {
@@ -23,12 +25,23 @@ namespace StoreOfBuild.Web
         {
             Bootstrap.Configure(services, Configuration.GetConnectionString("DefaultConnection"));
 
-            services.AddMvc();
+            services.AddMvc( config => {
+                config.Filters.Add(typeof(CustomExceptionFilter));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.Use( async (context, next) => 
+            {
+                // iniciando o Request
+                await next.Invoke();
+                // Response a reposta depois de tudo, buscando o servico do UnityOfWork
+                var unityOfWork = (IUnityOfWork)context.RequestServices.GetService(typeof(IUnityOfWork)); 
+                await unityOfWork.Commit();
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

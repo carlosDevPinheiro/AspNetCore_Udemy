@@ -4,26 +4,49 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using StoreOfBuild.Domain;
+using StoreOfBuild.Domain.Products;
 using StoreOfBuild.Web.Models;
+using StoreOfBuild.Web.ViewModels;
 
 namespace StoreOfBuild.Web.Controllers
 {
     public class CategoryController : Controller
     {
+        private readonly CategoryStores _categoryStories;
+
+        public IRepository<Category> _repositoryCatgory { get; }
+
+        public CategoryController(CategoryStores categoryStories, IRepository<Category> repository)
+        {
+            _categoryStories = categoryStories;
+            _repositoryCatgory = repository;
+        }
         public IActionResult Index()
         {
-            return View();
+            var categories = _repositoryCatgory.All();
+            var viewModels = categories.Select(c => new CategoryViewModel { Id = c.Id, Name = c.Name });
+            return View(viewModels);
         }
 
-        public IActionResult CreateOrEdit()
+        public IActionResult CreateOrEdit(int id)
         {
-            return View();
+            if (id > 0)
+            {
+                var category = _repositoryCatgory.GetById(id);
+                var viewModel = new CategoryViewModel { Id = category.Id, Name = category.Name };
+                return View(viewModel);
+            } else 
+            {
+                return View();
+            }
         }
 
         [HttpPost]
-        public IActionResult CreateOrEdit(int id)
+        public IActionResult CreateOrEdit(CategoryViewModel viewModel)
         {
-            return View();
+            _categoryStories.Store(viewModel.Id, viewModel.Name);
+            return RedirectToAction("Index");
         }
     }
 }

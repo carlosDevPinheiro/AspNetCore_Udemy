@@ -1,4 +1,4 @@
-using StoreOfBuild.Domain.Dtos;
+
 
 namespace StoreOfBuild.Domain.Products
 {
@@ -11,17 +11,17 @@ namespace StoreOfBuild.Domain.Products
             _repositoryCategory = repositoryCategory;
         }
 
-        public void Store(CategoryDto dto)
+        public void Store(int id,string name)
         {
-            var category = _repositoryCategory.GetById(dto.Id);
+            var category = _repositoryCategory.GetById(id);
             if (category == null)
             {
-                category = new Category(dto.Name);
+                category = new Category(name);
                 _repositoryCategory.Save(category);
             }
-            else 
+            else
             {
-                category.update(dto.Name);
+                category.update(name);
             }
         }
     }
