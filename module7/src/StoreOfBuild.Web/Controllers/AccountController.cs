@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StoreOfBuild.Domain;
 using StoreOfBuild.Domain.Account;
@@ -12,6 +13,7 @@ using StoreOfBuild.Web.ViewModels;
 
 namespace StoreOfBuild.Web.Controllers
 {
+    
     public class AccountController : Controller
     {
         private readonly IAuthentication _authtentication;
@@ -21,6 +23,7 @@ namespace StoreOfBuild.Web.Controllers
             _authtentication = authtentication;
         }
         
+
         public IActionResult Login()
         {          
             return View();
@@ -33,7 +36,7 @@ namespace StoreOfBuild.Web.Controllers
           
             if(result)
             {
-                return RedirectToAction("/");
+                return Redirect("/") ;
             }else
             {
                 ModelState.AddModelError(string.Empty,"Invalid Login");

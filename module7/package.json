@@ -1,0 +1,16 @@
+{
+  "name": "StoreOfBuild",
+  "version": "1.0.0",
+  "description": "Script de commandos para rodas da pasta raiz não preciar ficar entrando em cada pasta",
+  "main": "this",
+  "author": "Antonio Carlos",
+  "license": "Udemy Curso de AspNet Core 1.0 e 2.0",
+  "private": "Mit",
+  "scripts": {
+    "start": "dotnet run -p .\\src\\StoreOfBuild.Web\\StoreOfBuild.Web.csproj",
+    "migration": "cd .\\src\\StoreOfBuild.Data\\ && dotnet ef --startup-project ..\\StoreOfBuild.Web\\StoreOfBuild.Web.csproj migrations add",
+    "remove-migration": "cd .\\src\\StoreOfBuild.Data\\ && dotnet ef --startup-project ..\\StoreOfBuild.Web\\StoreOfBuild.Web.csproj migrations remove",
+    "database-update": "cd .\\src\\StoreOfBuild.Data\\ && dotnet ef --startup-project ..\\StoreOfBuild.Web\\StoreOfBuild.Web.csproj migrations database update"
+  }
+
+}
