@@ -33,7 +33,8 @@ namespace StoreOfBuild.DI
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient(typeof(CategoryStores),  typeof(CategoryStores));
             services.AddTransient(typeof(IUnityOfWork), typeof(UnityOfWork));
-            services.AddScoped(typeof(IAuthentication), typeof(Authentication));          
+            services.AddScoped(typeof(IAuthentication), typeof(Authentication));
+            services.AddTransient(typeof(IManager), typeof(Manager));          
         }
     }
 }

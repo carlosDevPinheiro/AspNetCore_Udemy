@@ -1,0 +1,29 @@
+@model IEnumerable<StoreOfBuild.Web.ViewModels.UserViewModel>
+
+<div class="row header">
+    <div class="col-md-12">
+        <h3>Users</h3>
+        <a href="/User/Create" class="btn btn-primary">New</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            @if(@Model != null)
+            {
+                @foreach(var viewModel in @Model)
+                {
+                    <tr>
+                        <td>
+                            <a class="name">@viewModel.Email</a>
+                        </td>
+                        <td>
+                            <a href="/User/ChangePassword/@viewModel.Id" class="btn">Change Password</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
